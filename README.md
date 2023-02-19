@@ -1,4 +1,17 @@
+# Sobre o Projeto
+
+O presente projeto tem por objetivo o desenvolvimento de um sistema de controle de contas a pagar.
+
+A branch "<b>bills-to-pay-dev</b>" é utilizada para o desenvolvimento das funcionalidades enquanto que a 
+branch "<b>master</b>" representa a versão estável do sistema! Cada feature deve ser desenvolvida em uma 
+nova branch e ao final do desenvolvimento, deve ser criado o merge request para implementar a feature
+na branch "<b>master</b>". 
+
+Cada nova necessidade de funcionalidade ou correção deverá ser cadastrada como uma nova Issue do projeto.
+
 # Getting Started
+
+[... <i>under construction ...</i>]
 
 ### Reference Documentation
 
@@ -6,7 +19,6 @@ For further reference, please consider the following sections:
 
 * [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
 * [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/3.0.2/maven-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/3.0.2/maven-plugin/reference/html/#build-image)
 * [OAuth2 Resource Server](https://docs.spring.io/spring-boot/docs/3.0.2/reference/htmlsingle/#web.security.oauth2.server)
 * [Spring Boot DevTools](https://docs.spring.io/spring-boot/docs/3.0.2/reference/htmlsingle/#using.devtools)
 * [Spring Web](https://docs.spring.io/spring-boot/docs/3.0.2/reference/htmlsingle/#web)
