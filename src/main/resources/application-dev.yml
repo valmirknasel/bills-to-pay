@@ -1,0 +1,41 @@
+# CHAVES CUSTOMIZADAS
+app:
+  keycloak:
+    host: http://localhost
+    port: 8090
+    realm: finance
+    logout-endpoint-redirect-uri: http://localhost:${server.port}
+  datasource:
+    host: jdbc:postgresql://localhost
+    port: 5432
+    db: billstopay
+
+
+spring:
+  # CONFIGURACOES DE BANCO
+  datasource:
+    url: ${app.datasource.host}:${app.datasource.port}/${app.datasource.db}
+    username: postgres
+    password: postgres
+  # CONFIGURACOES DO AMBIENTE DEV
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+
+  # CONFIGURACOES DE SEGURANCA DO SPRING SECURITY E KEYCLOAK
+  security:
+    oauth2:
+      resourceserver:
+        # APONTA PARA A API DO SERVER DO KEYCLOAK PARA VALIDAR OS TOKENS JWT
+        jwt:
+          issuer-uri: ${app.keycloak.host}:${app.keycloak.port}/auth/realms/${app.keycloak.realm}
+          jwk-set-uri: ${app.keycloak.host}:${app.keycloak.port}/auth/realms/${app.keycloak.realm}/protocol/openid-connect/certs
+
+# CONFIGURACOES DE NIVEL DE LOG
+logging:
+  level:
+    root: DEBUG
+    org.springframework:
+      boot: info
+      web: DEBUG
